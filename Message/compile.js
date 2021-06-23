@@ -22,5 +22,5 @@ const input = {
     },
 };
 
-const output = solc.compile(JSON.stringify(input));
-console.log(output);
+const output = JSON.stringify(solc.compile(JSON.stringify(input)));
+console.log(output.contracts['message.sol']);
